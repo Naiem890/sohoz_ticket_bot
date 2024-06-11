@@ -169,7 +169,7 @@ function loadBusList(journeyId) {
 
 // Schedule to run for each journey
 journeysToCheck.forEach(journey => {
-    cron.schedule('*/2 * * * *', () => { // Run every 2 minutes
+    cron.schedule('*/10 * * * *', () => { // Run every 2 minutes
         checkForNewBuses(journey.id);
     });
 });
