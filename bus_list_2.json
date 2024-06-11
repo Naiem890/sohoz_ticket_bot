@@ -1,0 +1,92 @@
+[
+  {
+    "journeyId": 2,
+    "busId": 12857975,
+    "company": "KTC Hanif",
+    "busType": "AC",
+    "route": "Chapai Nawabganj - Raja Bari - Rajshahi - Natore - Puthia - Sirajganj - Tangail - Dhaka",
+    "startTime": "09:15:00",
+    "endTime": "15:45:00",
+    "seatsAvailable": 2
+  },
+  {
+    "journeyId": 2,
+    "busId": 12862552,
+    "company": "Evergreen Transport Ltd",
+    "busType": "AC",
+    "route": "CHP→RAJ→DHK via Gabtoli",
+    "startTime": "09:45:00",
+    "endTime": "17:00:00",
+    "seatsAvailable": 8
+  },
+  {
+    "journeyId": 2,
+    "busId": 12862566,
+    "company": "Evergreen Transport Ltd",
+    "busType": "AC",
+    "route": "CHP→RAJ→DHK via Gabtoli",
+    "startTime": "10:15:00",
+    "endTime": "17:30:00",
+    "seatsAvailable": 9
+  },
+  {
+    "journeyId": 2,
+    "busId": 12864654,
+    "company": "Evergreen Transport Ltd",
+    "busType": "AC",
+    "route": "CHP→RAJ→DHK via Gabtoli ○ Kallyanpur",
+    "startTime": "11:15:00",
+    "endTime": "16:00:00",
+    "seatsAvailable": 20
+  },
+  {
+    "journeyId": 2,
+    "busId": 12865441,
+    "company": "Evergreen Transport Ltd",
+    "busType": "AC",
+    "route": "CHP→RAJ→DHK via Gabtoli ○ Kallyanpur",
+    "startTime": "17:15:00",
+    "endTime": "00:45:00",
+    "seatsAvailable": 27
+  },
+  {
+    "journeyId": 2,
+    "busId": 12865452,
+    "company": "Evergreen Transport Ltd",
+    "busType": "AC",
+    "route": "CHP→RAJ→DHK via Gabtoli ○ Kallyanpur",
+    "startTime": "17:30:00",
+    "endTime": "01:00:00",
+    "seatsAvailable": 30
+  },
+  {
+    "journeyId": 2,
+    "busId": 12865400,
+    "company": "Evergreen Transport Ltd",
+    "busType": "AC",
+    "route": "CHP→RAJ→DHK via Gabtoli ○ Kallyanpur",
+    "startTime": "23:00:00",
+    "endTime": "06:30:00",
+    "seatsAvailable": 13
+  },
+  {
+    "journeyId": 2,
+    "busId": 12865412,
+    "company": "Evergreen Transport Ltd",
+    "busType": "AC",
+    "route": "CHP→RAJ→DHK via Gabtoli ○ Kallyanpur",
+    "startTime": "23:15:00",
+    "endTime": "06:45:00",
+    "seatsAvailable": 17
+  },
+  {
+    "journeyId": 2,
+    "busId": 12865427,
+    "company": "Evergreen Transport Ltd",
+    "busType": "AC",
+    "route": "CHP→RAJ→DHK via Gabtoli ○ Kallyanpur",
+    "startTime": "23:45:00",
+    "endTime": "04:30:00",
+    "seatsAvailable": 27
+  }
+]

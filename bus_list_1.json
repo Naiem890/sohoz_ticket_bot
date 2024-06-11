@@ -1,0 +1,132 @@
+[
+  {
+    "journeyId": 1,
+    "busId": 12806906,
+    "company": "S.R Travels (Pvt) Ltd",
+    "busType": "Non AC",
+    "route": "Naogaon - Santahar - Bogra - Dhaka",
+    "startTime": "09:00:00",
+    "endTime": "13:30:00",
+    "seatsAvailable": 0
+  },
+  {
+    "journeyId": 1,
+    "busId": 12806934,
+    "company": "S.R Travels (Pvt) Ltd",
+    "busType": "Non AC",
+    "route": "Naogaon - Santahar - Bogra - Dhaka",
+    "startTime": "10:00:00",
+    "endTime": "14:30:00",
+    "seatsAvailable": 0
+  },
+  {
+    "journeyId": 1,
+    "busId": 12806973,
+    "company": "S.R Travels (Pvt) Ltd",
+    "busType": "Non AC",
+    "route": "Naogaon - Santahar - Bogra - Dhaka",
+    "startTime": "12:00:00",
+    "endTime": "16:30:00",
+    "seatsAvailable": 0
+  },
+  {
+    "journeyId": 1,
+    "busId": 12807118,
+    "company": "S.R Travels (Pvt) Ltd",
+    "busType": "Non AC",
+    "route": "Naogaon - Santahar - Bogra - Dhaka",
+    "startTime": "14:00:00",
+    "endTime": "18:30:00",
+    "seatsAvailable": 0
+  },
+  {
+    "journeyId": 1,
+    "busId": 12807334,
+    "company": "S.R Travels (Pvt) Ltd",
+    "busType": "Non AC",
+    "route": "Naogaon - Santahar - Bogra - Dhaka",
+    "startTime": "17:30:00",
+    "endTime": "22:00:00",
+    "seatsAvailable": 0
+  },
+  {
+    "journeyId": 1,
+    "busId": 12828993,
+    "company": "Heritage Travels",
+    "busType": "AC",
+    "route": "Ranisankail - Dhaka (Via-Nekmarad - Baliadangi - Thakurgaon - Birgonj - Doshmile  - Dinajpur - Fulbari - Ambari  -- Birampur - Bhaduria - Raniganj - Ghoraghat - Gobindaganj - Bogura - Dhaka)",
+    "startTime": "19:30:00",
+    "endTime": "05:00:00",
+    "seatsAvailable": 0
+  },
+  {
+    "journeyId": 1,
+    "busId": 12829008,
+    "company": "Heritage Travels",
+    "busType": "AC",
+    "route": "Thakurgaon - Dhaka (Via-Birgonj - Doshmile  - Dinajpur - Fulbari - Ambari  -- Birampur - Bhaduria - Raniganj - Ghoraghat - Gobindaganj - Bogura - Dhaka)",
+    "startTime": "19:45:00",
+    "endTime": "05:15:00",
+    "seatsAvailable": 0
+  },
+  {
+    "journeyId": 1,
+    "busId": 12869986,
+    "company": "Euro Coach",
+    "busType": "AC",
+    "route": "Atwari - Boda - Thakurgaon - Birgonj - Doshmile - Saidpur - Taraganj - Rangpur - Gobindaganj - Bogura - Dhaka",
+    "startTime": "20:00:00",
+    "endTime": "05:00:00",
+    "seatsAvailable": 15
+  },
+  {
+    "journeyId": 1,
+    "busId": 12867189,
+    "company": "Euro Coach",
+    "busType": "AC",
+    "route": "Panchagarh - Boda - Thakurgaon - Birgonj - Doshmile - Saidpur - Taraganj - Rangpur - Gobindaganj - Bogura - Dhaka",
+    "startTime": "20:00:00",
+    "endTime": "05:00:00",
+    "seatsAvailable": 2
+  },
+  {
+    "journeyId": 1,
+    "busId": 12829017,
+    "company": "Heritage Travels",
+    "busType": "AC",
+    "route": "Dinajpur - Dhaka (Via - Fulbari - Birampur - Gobindaganj - Bogura)",
+    "startTime": "21:00:00",
+    "endTime": "05:15:00",
+    "seatsAvailable": 2
+  },
+  {
+    "journeyId": 1,
+    "busId": 12867456,
+    "company": "46 Express Ltd",
+    "busType": "AC",
+    "route": "Thakurgaon - Chittagong (Via>Saidpur-Rangpur- Bogura-Dhaka)",
+    "startTime": "21:45:00",
+    "endTime": "00:50:00",
+    "seatsAvailable": 1
+  },
+  {
+    "journeyId": 1,
+    "busId": 12828981,
+    "company": "Heritage Travels",
+    "busType": "AC",
+    "route": "Dinajpur - Dhaka (Via - Fulbari - Birampur - Gobindaganj - Bogura)",
+    "startTime": "21:45:00",
+    "endTime": "06:00:00",
+    "seatsAvailable": 0
+  },
+  {
+    "journeyId": 1,
+    "busId": 12807348,
+    "company": "S.R Travels (Pvt) Ltd",
+    "busType": "Non AC",
+    "route": "Naogaon - Santahar - Bogra - Dhaka",
+    "startTime": "23:15:00",
+    "endTime": "04:00:00",
+    "seatsAvailable": 0
+  }
+]
