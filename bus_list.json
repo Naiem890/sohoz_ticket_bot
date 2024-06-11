@@ -1,0 +1,56 @@
+[
+  {
+    "company": "S.R Travels (Pvt) Ltd",
+    "busType": "ISUZU, Non AC",
+    "route": "Naogaon - Santahar - Bogra - Dhaka",
+    "startTime": "09:00:00",
+    "endTime": "13:30:00",
+    "fare": "540.00",
+    "seatsAvailable": "0"
+  },
+  {
+    "company": "S.R Travels (Pvt) Ltd",
+    "busType": "ISUZU, Non AC",
+    "route": "Naogaon - Santahar - Bogra - Dhaka",
+    "startTime": "10:00:00",
+    "endTime": "14:30:00",
+    "fare": "540.00",
+    "seatsAvailable": "0"
+  },
+  {
+    "company": "S.R Travels (Pvt) Ltd",
+    "busType": "ISUZU, Non AC",
+    "route": "Naogaon - Santahar - Bogra - Dhaka",
+    "startTime": "12:00:00",
+    "endTime": "16:30:00",
+    "fare": "540.00",
+    "seatsAvailable": "0"
+  },
+  {
+    "company": "S.R Travels (Pvt) Ltd",
+    "busType": "ISUZU, Non AC",
+    "route": "Naogaon - Santahar - Bogra - Dhaka",
+    "startTime": "14:00:00",
+    "endTime": "18:30:00",
+    "fare": "540.00",
+    "seatsAvailable": "0"
+  },
+  {
+    "company": "S.R Travels (Pvt) Ltd",
+    "busType": "ISUZU, Non AC",
+    "route": "Naogaon - Santahar - Bogra - Dhaka",
+    "startTime": "17:30:00",
+    "endTime": "22:00:00",
+    "fare": "540.00",
+    "seatsAvailable": "0"
+  },
+  {
+    "company": "S.R Travels (Pvt) Ltd",
+    "busType": "ISUZU, Non AC",
+    "route": "Naogaon - Santahar - Bogra - Dhaka",
+    "startTime": "23:15:00",
+    "endTime": "04:00:00",
+    "fare": "540.00",
+    "seatsAvailable": "0"
+  }
+]
