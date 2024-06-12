@@ -17,14 +17,6 @@ const journeysToCheck = [
         doj: "22-Jun-2024",
         chatId: 6913644510,
         acType: "ANY"
-    },
-    {
-        id: 2,
-        fromcity: "Rajshahi",
-        tocity: "Dhaka",
-        doj: "22-Jun-2024",
-        chatId: 6913644510,
-        acType: "ANY"
     }
 ];
 
@@ -40,46 +32,54 @@ async function getBusList(journeyId) {
 
     const URL = `${URL_BASE}fromcity=${journey.fromcity}&tocity=${journey.tocity}&doj=${journey.doj}&dor=`;
     console.log(`Launching headless browser for journey ${journeyId}...`, URL);
-    const browser = await puppeteer.launch();
-    const page = await browser.newPage();
-    await page.goto(URL, {
-        waitUntil: 'networkidle0'
-    });
 
-    console.log(`Waiting for bus data for journey ${journeyId} to load...`);
-    await page.waitForSelector('.trip-row');
-
-    const busList = await page.evaluate((acType, journeyId) => {
-        const buses = [];
-        document.querySelectorAll('.trip-row').forEach(bus => {
-            const tripData = JSON.parse(bus.getAttribute('data-trip'));
-            const seatAvailability = +bus.querySelector('td[data-title="Seats Available"]').textContent.trim();
-            //console.log('acType:', acType, 'busType:', tripData.tripRoute.bus_desc, 'busType.includes(Non AC):', tripData.tripRoute.bus_desc.includes('Non AC'), 'busType.includes(AC):', tripData.tripRoute.bus_desc.includes('AC'));
-            if (acType === 'ANY' || (acType === 'Non AC' && tripData.tripRoute.bus_desc.includes('Non AC')) || (acType === 'AC' && tripData.tripRoute.bus_desc.includes('AC'))) {
-                buses.push({
-                    journeyId: journeyId,
-                    busId: tripData.tripId, // Using tripId as busId
-                    company: tripData.details.company_name,
-                    busType: tripData.tripRoute.bus_desc.includes('Non AC') ? 'Non AC' : 'AC',
-                    route: tripData.details.trip_heading,
-                    startTime: tripData.details.departure_time,
-                    endTime: tripData.details.arrival_time,
-                    seatsAvailable: seatAvailability
-                });
-            }
+    let browser;
+    try {
+        browser = await puppeteer.launch();
+        const page = await browser.newPage();
+        await page.goto(URL, {
+            waitUntil: 'networkidle0',
+            timeout: 60000 
         });
-        return buses;
-    }, journey.acType, journey.id);
 
+        console.log(`Waiting for bus data for journey ${journeyId} to load...`);
+        await page.waitForSelector('.trip-row', { timeout: 60000 });
 
-    await browser.close();
-    console.log(`Fetched ${busList.length} buses for journey ${journeyId}.`);
-    return busList;
+        const busList = await page.evaluate((acType, journeyId) => {
+            const buses = [];
+            document.querySelectorAll('.trip-row').forEach(bus => {
+                const tripData = JSON.parse(bus.getAttribute('data-trip'));
+                const seatAvailability = +bus.querySelector('td[data-title="Seats Available"]').textContent.trim();
+                if (acType === 'ANY' || (acType === 'Non AC' && tripData.tripRoute.bus_desc.includes('Non AC')) || (acType === 'AC' && tripData.tripRoute.bus_desc.includes('AC'))) {
+                    buses.push({
+                        journeyId: journeyId,
+                        busId: tripData.tripId, // Using tripId as busId
+                        company: tripData.details.company_name,
+                        busType: tripData.tripRoute.bus_desc.includes('Non AC') ? 'Non AC' : 'AC',
+                        route: tripData.details.trip_heading,
+                        startTime: tripData.details.departure_time,
+                        endTime: tripData.details.arrival_time,
+                        seatsAvailable: seatAvailability
+                    });
+                }
+            });
+            return buses;
+        }, journey.acType, journey.id);
+
+        console.log(`Fetched ${busList.length} buses for journey ${journeyId}.`);
+        return busList;
+    } catch (error) {
+        console.error(`Error fetching bus list for journey ${journeyId}:`, error);
+        return [];
+    } finally {
+        if (browser) {
+            await browser.close();
+        }
+    }
 }
 
-
 function convertToAMPM(time) {
-    const [hours, minutes, seconds] = time.split(':');
+    const [hours, minutes] = time.split(':');
     let period = 'AM';
     let hours12 = parseInt(hours);
     if (hours12 >= 12) {
@@ -90,7 +90,6 @@ function convertToAMPM(time) {
     }
     return `${hours12}:${minutes} ${period}`;
 }
-
 
 async function sendTelegramNotification(newBuses, journeyId) {
     console.log(`Sending Telegram notification for journey ${journeyId}...`);
@@ -110,7 +109,7 @@ async function sendTelegramNotification(newBuses, journeyId) {
         message += `   - Seats Available: ${bus.seatsAvailable}\n\n`;
     });
 
-    const bookTicketUrl = `${URL_BASE}fromcity=${journeysToCheck[journeyId - 1].fromcity}&tocity=${journeysToCheck[journeyId - 1].tocity}&doj=${journeysToCheck[journeyId - 1].doj}&dor=`;
+    const bookTicketUrl = `${URL_BASE}fromcity=${journey.fromcity}&tocity=${journey.tocity}&doj=${journey.doj}&dor=`;
 
     message += `Book your ticket now: [Link to Book Tickets](${bookTicketUrl})`;
 
@@ -118,7 +117,7 @@ async function sendTelegramNotification(newBuses, journeyId) {
 
     try {
         const result = await axios.post(url, {
-            chat_id: journeysToCheck[journeyId - 1].chatId,
+            chat_id: journey.chatId,
             text: message,
             parse_mode: 'Markdown'
         });
@@ -131,53 +130,60 @@ async function sendTelegramNotification(newBuses, journeyId) {
 
 async function checkForNewBuses(journeyId) {
     console.log(`Checking for new buses for journey ${journeyId}...`);
-    const currentBusList = await getBusList(journeyId);
-    const savedBusList = loadBusList(journeyId);
-    const newBuses = currentBusList.filter(bus => {
-        if (savedBusList.find(savedBus => savedBus.busId === bus.busId)) {
-            return false;
-        } else {
-            return true;
-        }
-    });
+    try {
+        const currentBusList = await getBusList(journeyId);
+        const savedBusList = loadBusList(journeyId);
+        const newBuses = currentBusList.filter(bus => !savedBusList.find(savedBus => savedBus.busId === bus.busId));
 
-    if (newBuses.length > 0) {
-        console.log(`${newBuses.length} new buses found for journey ${journeyId}.`);
-        await sendTelegramNotification(newBuses, journeyId);
-        saveBusList(currentBusList, journeyId); // Pass journeyId here
-    } else {
-        console.log(`No new buses found for journey ${journeyId}.`);
+        if (newBuses.length > 0) {
+            console.log(`${newBuses.length} new buses found for journey ${journeyId}.`);
+            await sendTelegramNotification(newBuses, journeyId);
+            saveBusList(currentBusList, journeyId);
+        } else {
+            console.log(`No new buses found for journey ${journeyId}.`);
+        }
+    } catch (error) {
+        console.error(`Error checking for new buses for journey ${journeyId}:`, error);
     }
 }
 
 function saveBusList(busList, journeyId) {
-    const filename = `${FILENAME_BASE}${journeyId}${JSON_EXTENSION}`; // Construct filename based on journeyId
-    fs.writeFileSync(filename, JSON.stringify(busList, null, 2));
-    console.log(`Bus list saved for journey ${journeyId}.`);
+    const filename = `${FILENAME_BASE}${journeyId}${JSON_EXTENSION}`;
+    try {
+        fs.writeFileSync(filename, JSON.stringify(busList, null, 2));
+        console.log(`Bus list saved for journey ${journeyId}.`);
+    } catch (error) {
+        console.error(`Error saving bus list for journey ${journeyId}:`, error);
+    }
 }
 
 function loadBusList(journeyId) {
-    const filename = `${FILENAME_BASE}${journeyId}${JSON_EXTENSION}`; // Construct filename based on journeyId
-    if (fs.existsSync(filename)) {
-        const data = JSON.parse(fs.readFileSync(filename));
-        console.log(`Bus list loaded for journey ${journeyId}.`);
-        return data;
+    const filename = `${FILENAME_BASE}${journeyId}${JSON_EXTENSION}`;
+    try {
+        if (fs.existsSync(filename)) {
+            const data = JSON.parse(fs.readFileSync(filename));
+            console.log(`Bus list loaded for journey ${journeyId}.`);
+            return data;
+        }
+        console.log(`No saved bus list found for journey ${journeyId}.`);
+    } catch (error) {
+        console.error(`Error loading bus list for journey ${journeyId}:`, error);
     }
-    console.log(`No saved bus list found for journey ${journeyId}.`);
     return [];
 }
 
 // Schedule to run for each journey
 journeysToCheck.forEach(journey => {
-    cron.schedule('*/10 * * * *', () => { // Run every 2 minutes
+    cron.schedule('*/10 * * * *', () => { // Run every 10 minutes
         checkForNewBuses(journey.id);
+        console.log("=====================================");
     });
 });
 
 // Initial run for each journey
 journeysToCheck.forEach(journey => {
-    (async() => {
+    (async () => {
         await checkForNewBuses(journey.id);
+        console.log("=====================================");
     })();
 });
-

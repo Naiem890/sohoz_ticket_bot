@@ -1,6 +1,76 @@
 [
   {
     "journeyId": 1,
+    "busId": 12807395,
+    "company": "S.R Travels (Pvt) Ltd",
+    "busType": "Non AC",
+    "route": "Bogra - Dhaka",
+    "startTime": "06:00:00",
+    "endTime": "11:00:00",
+    "seatsAvailable": 0
+  },
+  {
+    "journeyId": 1,
+    "busId": 12854393,
+    "company": "Manik Express",
+    "busType": "AC",
+    "route": "Bogura - Dhaka",
+    "startTime": "07:00:00",
+    "endTime": "13:30:00",
+    "seatsAvailable": 2
+  },
+  {
+    "journeyId": 1,
+    "busId": 12807409,
+    "company": "S.R Travels (Pvt) Ltd",
+    "busType": "Non AC",
+    "route": "Bogra - Dhaka",
+    "startTime": "07:00:00",
+    "endTime": "12:00:00",
+    "seatsAvailable": 0
+  },
+  {
+    "journeyId": 1,
+    "busId": 12854525,
+    "company": "Manik Express",
+    "busType": "AC",
+    "route": "Bogra - Dhaka",
+    "startTime": "07:30:00",
+    "endTime": "12:30:00",
+    "seatsAvailable": 7
+  },
+  {
+    "journeyId": 1,
+    "busId": 12854405,
+    "company": "Manik Express",
+    "busType": "AC",
+    "route": "Bogra - Dhaka",
+    "startTime": "08:00:00",
+    "endTime": "13:00:00",
+    "seatsAvailable": 3
+  },
+  {
+    "journeyId": 1,
+    "busId": 12807437,
+    "company": "S.R Travels (Pvt) Ltd",
+    "busType": "AC",
+    "route": "Bogra - Dhaka",
+    "startTime": "08:30:00",
+    "endTime": "13:30:00",
+    "seatsAvailable": 0
+  },
+  {
+    "journeyId": 1,
+    "busId": 12854417,
+    "company": "Manik Express",
+    "busType": "AC",
+    "route": "Bogra - Dhaka",
+    "startTime": "08:30:00",
+    "endTime": "13:30:00",
+    "seatsAvailable": 4
+  },
+  {
+    "journeyId": 1,
     "busId": 12806906,
     "company": "S.R Travels (Pvt) Ltd",
     "busType": "Non AC",
@@ -8,6 +78,36 @@
     "startTime": "09:00:00",
     "endTime": "13:30:00",
     "seatsAvailable": 0
+  },
+  {
+    "journeyId": 1,
+    "busId": 12854585,
+    "company": "Manik Express",
+    "busType": "AC",
+    "route": "Bogura - Dhaka",
+    "startTime": "09:00:00",
+    "endTime": "14:00:00",
+    "seatsAvailable": 4
+  },
+  {
+    "journeyId": 1,
+    "busId": 12807496,
+    "company": "S.R Travels (Pvt) Ltd",
+    "busType": "AC",
+    "route": "Bogura - Dhaka",
+    "startTime": "09:15:00",
+    "endTime": "14:15:00",
+    "seatsAvailable": 0
+  },
+  {
+    "journeyId": 1,
+    "busId": 12854537,
+    "company": "Manik Express",
+    "busType": "AC",
+    "route": "Bogra - Dhaka",
+    "startTime": "09:30:00",
+    "endTime": "14:30:00",
+    "seatsAvailable": 5
   },
   {
     "journeyId": 1,
@@ -21,6 +121,36 @@
   },
   {
     "journeyId": 1,
+    "busId": 12854429,
+    "company": "Manik Express",
+    "busType": "AC",
+    "route": "Bogra - Dhaka",
+    "startTime": "10:30:00",
+    "endTime": "15:30:00",
+    "seatsAvailable": 4
+  },
+  {
+    "journeyId": 1,
+    "busId": 12807510,
+    "company": "S.R Travels (Pvt) Ltd",
+    "busType": "Non AC",
+    "route": "Bogra - Dhaka",
+    "startTime": "10:30:00",
+    "endTime": "15:30:00",
+    "seatsAvailable": 0
+  },
+  {
+    "journeyId": 1,
+    "busId": 12854441,
+    "company": "Manik Express",
+    "busType": "AC",
+    "route": "Bogra - Dhaka",
+    "startTime": "11:30:00",
+    "endTime": "16:30:00",
+    "seatsAvailable": 3
+  },
+  {
+    "journeyId": 1,
     "busId": 12806973,
     "company": "S.R Travels (Pvt) Ltd",
     "busType": "Non AC",
@@ -31,6 +161,26 @@
   },
   {
     "journeyId": 1,
+    "busId": 12870119,
+    "company": "S.R Travels (Pvt) Ltd",
+    "busType": "Non AC",
+    "route": "Bogra - Dhaka",
+    "startTime": "12:30:00",
+    "endTime": "17:30:00",
+    "seatsAvailable": 0
+  },
+  {
+    "journeyId": 1,
+    "busId": 12854549,
+    "company": "Manik Express",
+    "busType": "AC",
+    "route": "Bogra - Dhaka",
+    "startTime": "13:30:00",
+    "endTime": "18:30:00",
+    "seatsAvailable": 5
+  },
+  {
+    "journeyId": 1,
     "busId": 12807118,
     "company": "S.R Travels (Pvt) Ltd",
     "busType": "Non AC",
@@ -38,6 +188,86 @@
     "startTime": "14:00:00",
     "endTime": "18:30:00",
     "seatsAvailable": 0
+  },
+  {
+    "journeyId": 1,
+    "busId": 12807539,
+    "company": "S.R Travels (Pvt) Ltd",
+    "busType": "AC",
+    "route": "Bogura - Dhaka",
+    "startTime": "14:30:00",
+    "endTime": "19:30:00",
+    "seatsAvailable": 0
+  },
+  {
+    "journeyId": 1,
+    "busId": 12854453,
+    "company": "Manik Express",
+    "busType": "AC",
+    "route": "Bogra - Dhaka",
+    "startTime": "14:30:00",
+    "endTime": "19:30:00",
+    "seatsAvailable": 1
+  },
+  {
+    "journeyId": 1,
+    "busId": 12807553,
+    "company": "S.R Travels (Pvt) Ltd",
+    "busType": "Non AC",
+    "route": "Bogra - Dhaka",
+    "startTime": "15:00:00",
+    "endTime": "20:00:00",
+    "seatsAvailable": 0
+  },
+  {
+    "journeyId": 1,
+    "busId": 12854561,
+    "company": "Manik Express",
+    "busType": "AC",
+    "route": "Bogra - Dhaka",
+    "startTime": "15:30:00",
+    "endTime": "20:30:00",
+    "seatsAvailable": 5
+  },
+  {
+    "journeyId": 1,
+    "busId": 12807567,
+    "company": "S.R Travels (Pvt) Ltd",
+    "busType": "AC",
+    "route": "Bogra - Dhaka",
+    "startTime": "16:00:00",
+    "endTime": "21:00:00",
+    "seatsAvailable": 0
+  },
+  {
+    "journeyId": 1,
+    "busId": 12807581,
+    "company": "S.R Travels (Pvt) Ltd",
+    "busType": "Non AC",
+    "route": "Bogra - Dhaka",
+    "startTime": "16:15:00",
+    "endTime": "21:15:00",
+    "seatsAvailable": 0
+  },
+  {
+    "journeyId": 1,
+    "busId": 12854465,
+    "company": "Manik Express",
+    "busType": "AC",
+    "route": "Bogra - Dhaka",
+    "startTime": "16:30:00",
+    "endTime": "21:30:00",
+    "seatsAvailable": 3
+  },
+  {
+    "journeyId": 1,
+    "busId": 12854477,
+    "company": "Manik Express",
+    "busType": "AC",
+    "route": "Bogra - Dhaka",
+    "startTime": "17:00:00",
+    "endTime": "22:00:00",
+    "seatsAvailable": 4
   },
   {
     "journeyId": 1,
@@ -77,7 +307,7 @@
     "route": "Atwari - Boda - Thakurgaon - Birgonj - Doshmile - Saidpur - Taraganj - Rangpur - Gobindaganj - Bogura - Dhaka",
     "startTime": "20:00:00",
     "endTime": "05:00:00",
-    "seatsAvailable": 15
+    "seatsAvailable": 10
   },
   {
     "journeyId": 1,
@@ -97,7 +327,17 @@
     "route": "Dinajpur - Dhaka (Via - Fulbari - Birampur - Gobindaganj - Bogura)",
     "startTime": "21:00:00",
     "endTime": "05:15:00",
-    "seatsAvailable": 2
+    "seatsAvailable": 1
+  },
+  {
+    "journeyId": 1,
+    "busId": 12854597,
+    "company": "Manik Express",
+    "busType": "AC",
+    "route": "Bogura - Dhaka",
+    "startTime": "21:30:00",
+    "endTime": "03:00:00",
+    "seatsAvailable": 7
   },
   {
     "journeyId": 1,
@@ -107,7 +347,7 @@
     "route": "Thakurgaon - Chittagong (Via>Saidpur-Rangpur- Bogura-Dhaka)",
     "startTime": "21:45:00",
     "endTime": "00:50:00",
-    "seatsAvailable": 1
+    "seatsAvailable": 0
   },
   {
     "journeyId": 1,
@@ -121,12 +361,82 @@
   },
   {
     "journeyId": 1,
+    "busId": 12854489,
+    "company": "Manik Express",
+    "busType": "AC",
+    "route": "Bogra - Dhaka",
+    "startTime": "22:30:00",
+    "endTime": "16:00:00",
+    "seatsAvailable": 6
+  },
+  {
+    "journeyId": 1,
     "busId": 12807348,
     "company": "S.R Travels (Pvt) Ltd",
     "busType": "Non AC",
     "route": "Naogaon - Santahar - Bogra - Dhaka",
     "startTime": "23:15:00",
     "endTime": "04:00:00",
+    "seatsAvailable": 0
+  },
+  {
+    "journeyId": 1,
+    "busId": 12854573,
+    "company": "Manik Express",
+    "busType": "AC",
+    "route": "Bogra - Dhaka",
+    "startTime": "23:30:00",
+    "endTime": "05:00:00",
+    "seatsAvailable": 7
+  },
+  {
+    "journeyId": 1,
+    "busId": 12807613,
+    "company": "S.R Travels (Pvt) Ltd",
+    "busType": "AC",
+    "route": "Bogura - Dhaka",
+    "startTime": "23:40:00",
+    "endTime": "04:40:00",
+    "seatsAvailable": 0
+  },
+  {
+    "journeyId": 1,
+    "busId": 12807627,
+    "company": "S.R Travels (Pvt) Ltd",
+    "busType": "Non AC",
+    "route": "Bogra - Dhaka",
+    "startTime": "23:45:00",
+    "endTime": "04:45:00",
+    "seatsAvailable": 0
+  },
+  {
+    "journeyId": 1,
+    "busId": 12854501,
+    "company": "Manik Express",
+    "busType": "AC",
+    "route": "Bogra - Dhaka",
+    "startTime": "23:45:00",
+    "endTime": "17:00:00",
+    "seatsAvailable": 4
+  },
+  {
+    "journeyId": 1,
+    "busId": 12807698,
+    "company": "S.R Travels (Pvt) Ltd",
+    "busType": "AC",
+    "route": "Bogra - Dhaka",
+    "startTime": "23:50:00",
+    "endTime": "04:50:00",
+    "seatsAvailable": 0
+  },
+  {
+    "journeyId": 1,
+    "busId": 12807712,
+    "company": "S.R Travels (Pvt) Ltd",
+    "busType": "Non AC",
+    "route": "Bogra - Dhaka",
+    "startTime": "23:55:00",
+    "endTime": "04:55:00",
     "seatsAvailable": 0
   }
 ]
